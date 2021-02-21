@@ -139,7 +139,7 @@ public class ItemContainer extends Node {
 		int var8;
 		if (!Client.isInInstance) { // L: 5296
 			var2 = var1.readUnsignedShort(); // L: 5297
-			int var3 = var1.method5539(); // L: 5298
+			int var3 = var1.readUnsignedShortAdd(); // L: 5298
 			var4 = var1.readUnsignedShort(); // L: 5299
 			class227.xteaKeys = new int[var4][4]; // L: 5300
 
@@ -180,8 +180,8 @@ public class ItemContainer extends Node {
 			VarcInt.method4428(var2, var3, true); // L: 5325
 		} else {
 			var2 = var1.readUnsignedShort(); // L: 5328
-			boolean var15 = var1.method5573() == 1; // L: 5329
-			var4 = var1.method5580(); // L: 5330
+			boolean var15 = var1.readUnsignedByteSub() == 1; // L: 5329
+			var4 = var1.readUnsignedShortLE(); // L: 5330
 			var5 = var1.readUnsignedShort(); // L: 5331
 			var1.importIndex(); // L: 5332
 

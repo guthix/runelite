@@ -164,9 +164,9 @@ public class WorldMapElement extends DualNode {
 	@Export("decodeNext")
 	void decodeNext(Buffer var1, int var2) {
 		if (var2 == 1) { // L: 77
-			this.sprite1 = var1.method5559();
+			this.sprite1 = var1.readNullableLargeSmart();
 		} else if (var2 == 2) { // L: 78
-			this.sprite2 = var1.method5559();
+			this.sprite2 = var1.readNullableLargeSmart();
 		} else if (var2 == 3) { // L: 79
 			this.name = var1.readStringCp1252NullTerminated();
 		} else if (var2 == 4) { // L: 80
@@ -217,7 +217,7 @@ public class WorldMapElement extends DualNode {
 				if (var2 == 17) { // L: 106
 					this.menuTargetName = var1.readStringCp1252NullTerminated();
 				} else if (var2 == 18) { // L: 107
-					var1.method5559(); // L: 108
+					var1.readNullableLargeSmart(); // L: 108
 				} else if (var2 == 19) { // L: 110
 					this.category = var1.readUnsignedShort();
 				} else if (var2 == 21) { // L: 111
@@ -232,7 +232,7 @@ public class WorldMapElement extends DualNode {
 					var1.readShort(); // L: 123
 					var1.readShort(); // L: 124
 				} else if (var2 == 25) { // L: 126
-					var1.method5559(); // L: 127
+					var1.readNullableLargeSmart(); // L: 127
 				} else if (var2 == 28) { // L: 129
 					var1.readUnsignedByte(); // L: 130
 				} else if (var2 == 29) { // L: 132

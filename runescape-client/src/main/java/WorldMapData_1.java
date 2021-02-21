@@ -57,8 +57,8 @@ public class WorldMapData_1 extends AbstractWorldMapData {
 			super.regionY = var1.readUnsignedShort(); // L: 25
 			this.chunkX = var1.readUnsignedByte(); // L: 26
 			this.chunkY = var1.readUnsignedByte();
-			super.groupId = var1.method5559();
-			super.fileId = var1.method5559();
+			super.groupId = var1.readNullableLargeSmart();
+			super.fileId = var1.readNullableLargeSmart();
 		}
 	}
 

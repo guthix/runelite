@@ -62,7 +62,7 @@ public class Skeleton extends Node {
 		garbageValue = "-5"
 	)
 	static final void method3155(String var0) {
-		PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.field2319, Client.packetWriter.isaacCipher); // L: 194
+		PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.IGNORELIST_ADD, Client.packetWriter.isaacCipher); // L: 194
 		var1.packetBuffer.writeByte(FloorDecoration.stringCp1252NullTerminatedByteSize(var0)); // L: 195
 		var1.packetBuffer.writeStringCp1252NullTerminated(var0); // L: 196
 		Client.packetWriter.addNode(var1); // L: 197

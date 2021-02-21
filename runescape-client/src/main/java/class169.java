@@ -80,7 +80,7 @@ public enum class169 implements Enumerated {
 		int var6 = -1; // L: 198
 
 		while (true) {
-			int var7 = var5.method5557(); // L: 200
+			int var7 = var5.readIncrSmallSmart(); // L: 200
 			if (var7 == 0) { // L: 201
 				return; // L: 225
 			}

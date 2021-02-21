@@ -51,8 +51,8 @@ public class WorldMapData_0 extends AbstractWorldMapData {
 			super.regionYLow = var1.readUnsignedShort(); // L: 16
 			super.regionX = var1.readUnsignedShort(); // L: 17
 			super.regionY = var1.readUnsignedShort(); // L: 18
-			super.groupId = var1.method5559(); // L: 19
-			super.fileId = var1.method5559(); // L: 20
+			super.groupId = var1.readNullableLargeSmart(); // L: 19
+			super.fileId = var1.readNullableLargeSmart(); // L: 20
 		}
 	} // L: 21
 
@@ -403,7 +403,7 @@ public class WorldMapData_0 extends AbstractWorldMapData {
 				var5 = var1.readUnsignedByte(); // L: 7125
 				int var6;
 				if ((var5 & 8) != 0) { // L: 7126
-					var15.spotAnimation = var1.method5539(); // L: 7127
+					var15.spotAnimation = var1.readUnsignedShortAdd(); // L: 7127
 					var6 = var1.readInt(); // L: 7128
 					var15.field979 = var6 >> 16; // L: 7129
 					var15.field978 = (var6 & 65535) + Client.cycle; // L: 7130
@@ -419,8 +419,8 @@ public class WorldMapData_0 extends AbstractWorldMapData {
 				}
 
 				if ((var5 & 2) != 0) { // L: 7136
-					var6 = var1.method5582(); // L: 7137
-					var7 = var1.method5539(); // L: 7138
+					var6 = var1.readUnsignedShortAddLE(); // L: 7137
+					var7 = var1.readUnsignedShortAdd(); // L: 7138
 					var8 = var15.x - (var6 - NetFileRequest.baseX - NetFileRequest.baseX) * 64; // L: 7139
 					var9 = var15.y - (var7 - class41.baseY - class41.baseY) * 64; // L: 7140
 					if (var8 != 0 || var9 != 0) { // L: 7141
@@ -429,7 +429,7 @@ public class WorldMapData_0 extends AbstractWorldMapData {
 				}
 
 				if ((var5 & 16) != 0) { // L: 7143
-					var15.targetIndex = var1.method5580(); // L: 7144
+					var15.targetIndex = var1.readUnsignedShortLE(); // L: 7144
 					if (var15.targetIndex == 65535) { // L: 7145
 						var15.targetIndex = -1;
 					}
@@ -441,7 +441,7 @@ public class WorldMapData_0 extends AbstractWorldMapData {
 				}
 
 				if ((var5 & 1) != 0) { // L: 7151
-					var15.definition = WorldMapIcon_0.getNpcDefinition(var1.method5580()); // L: 7152
+					var15.definition = WorldMapIcon_0.getNpcDefinition(var1.readUnsignedShortLE()); // L: 7152
 					var15.field941 = var15.definition.size; // L: 7153
 					var15.field940 = var15.definition.rotation; // L: 7154
 					var15.walkSequence = var15.definition.walkSequence; // L: 7155
@@ -454,7 +454,7 @@ public class WorldMapData_0 extends AbstractWorldMapData {
 				}
 
 				if ((var5 & 64) != 0) { // L: 7163
-					var6 = var1.method5582(); // L: 7164
+					var6 = var1.readUnsignedShortAddLE(); // L: 7164
 					if (var6 == 65535) { // L: 7165
 						var6 = -1;
 					}
@@ -483,7 +483,7 @@ public class WorldMapData_0 extends AbstractWorldMapData {
 				}
 
 				if ((var5 & 4) != 0) { // L: 7189
-					var6 = var1.method5571(); // L: 7190
+					var6 = var1.readUnsignedByteAdd(); // L: 7190
 					int var12;
 					if (var6 > 0) { // L: 7191
 						for (var7 = 0; var7 < var6; ++var7) { // L: 7192
@@ -514,8 +514,8 @@ public class WorldMapData_0 extends AbstractWorldMapData {
 							var10 = var1.readUShortSmart(); // L: 7216
 							if (var10 != 32767) { // L: 7217
 								var11 = var1.readUShortSmart(); // L: 7218
-								var12 = var1.method5572(); // L: 7219
-								int var13 = var10 > 0 ? var1.method5572() : var12; // L: 7220
+								var12 = var1.readUnsignedByteNeg(); // L: 7219
+								int var13 = var10 > 0 ? var1.readUnsignedByteNeg() : var12; // L: 7220
 								var15.addHealthBar(var9, Client.cycle, var10, var11, var12, var13); // L: 7221
 							} else {
 								var15.removeHealthBar(var9); // L: 7223
@@ -525,12 +525,12 @@ public class WorldMapData_0 extends AbstractWorldMapData {
 				}
 
 				if ((var5 & 128) != 0) { // L: 7227
-					var15.field981 = var1.method5645(); // L: 7228
-					var15.field982 = var1.method5645(); // L: 7229
-					var15.field958 = var1.method5645(); // L: 7230
-					var15.field956 = var1.method5645(); // L: 7231
+					var15.field981 = var1.readByteAdd(); // L: 7228
+					var15.field982 = var1.readByteAdd(); // L: 7229
+					var15.field958 = var1.readByteAdd(); // L: 7230
+					var15.field956 = var1.readByteAdd(); // L: 7231
 					var15.field984 = var1.readUnsignedShort() + Client.cycle; // L: 7232
-					var15.field973 = var1.method5582() + Client.cycle; // L: 7233
+					var15.field973 = var1.readUnsignedShortAddLE() + Client.cycle; // L: 7233
 					var15.field986 = var1.readUnsignedShort(); // L: 7234
 					var15.pathLength = 1; // L: 7235
 					var15.field996 = 0; // L: 7236

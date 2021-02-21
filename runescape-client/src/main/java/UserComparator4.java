@@ -102,14 +102,14 @@ public class UserComparator4 implements Comparator {
 		int var9;
 		int var10;
 		if (class194.field2342 == var0) { // L: 6649
-			var2 = var1.method5582(); // L: 6650
-			var3 = var1.method5571(); // L: 6651
+			var2 = var1.readUnsignedShortAddLE(); // L: 6650
+			var3 = var1.readUnsignedByteAdd(); // L: 6651
 			var4 = (var3 >> 4 & 7) + PacketWriter.field1331; // L: 6652
 			var5 = (var3 & 7) + class248.field3222; // L: 6653
-			var6 = var1.method5571(); // L: 6654
+			var6 = var1.readUnsignedByteAdd(); // L: 6654
 			var7 = var6 >> 4 & 15; // L: 6655
 			var8 = var6 & 7; // L: 6656
-			var9 = var1.method5572(); // L: 6657
+			var9 = var1.readUnsignedByteNeg(); // L: 6657
 			if (var4 >= 0 && var5 >= 0 && var4 < 104 && var5 < 104) { // L: 6658
 				var10 = var7 + 1; // L: 6659
 				if (PlayerComposition.localPlayer.pathX[0] >= var4 - var10 && PlayerComposition.localPlayer.pathX[0] <= var10 + var4 && PlayerComposition.localPlayer.pathY[0] >= var5 - var10 && PlayerComposition.localPlayer.pathY[0] <= var5 + var10 && Timer.clientPreferences.areaSoundEffectsVolume != 0 && var8 > 0 && Client.soundEffectCount < 50) { // L: 6660 6661
@@ -124,10 +124,10 @@ public class UserComparator4 implements Comparator {
 		}
 
 		if (class194.field2349 == var0) { // L: 6672
-			var2 = var1.method5571(); // L: 6673
+			var2 = var1.readUnsignedByteAdd(); // L: 6673
 			var3 = (var2 >> 4 & 7) + PacketWriter.field1331; // L: 6674
 			var4 = (var2 & 7) + class248.field3222; // L: 6675
-			var5 = var1.method5582(); // L: 6676
+			var5 = var1.readUnsignedShortAddLE(); // L: 6676
 			var6 = var1.readUnsignedShort(); // L: 6677
 			var7 = var1.readUnsignedByte(); // L: 6678
 			if (var3 >= 0 && var4 >= 0 && var3 < 104 && var4 < 104) { // L: 6679
@@ -142,19 +142,19 @@ public class UserComparator4 implements Comparator {
 			int var13;
 			int var14;
 			if (class194.field2346 == var0) { // L: 6687
-				var2 = var1.method5573() * 4; // L: 6688
+				var2 = var1.readUnsignedByteSub() * 4; // L: 6688
 				byte var38 = var1.readByte(); // L: 6689
 				byte var39 = var1.readByte(); // L: 6690
 				var5 = var1.readUnsignedByte(); // L: 6691
-				var6 = var1.method5580(); // L: 6692
-				var7 = var1.method5584(); // L: 6693
-				var8 = var1.method5571(); // L: 6694
+				var6 = var1.readUnsignedShortLE(); // L: 6692
+				var7 = var1.readShortAddLE(); // L: 6693
+				var8 = var1.readUnsignedByteAdd(); // L: 6694
 				var9 = (var8 >> 4 & 7) + PacketWriter.field1331; // L: 6695
 				var10 = (var8 & 7) + class248.field3222; // L: 6696
 				var11 = var1.readUnsignedShort(); // L: 6697
-				int var41 = var1.method5582(); // L: 6698
-				var13 = var1.method5571(); // L: 6699
-				var14 = var1.method5573() * 4; // L: 6700
+				int var41 = var1.readUnsignedShortAddLE(); // L: 6698
+				var13 = var1.readUnsignedByteAdd(); // L: 6699
+				var14 = var1.readUnsignedByteSub() * 4; // L: 6700
 				var3 = var38 + var9; // L: 6701
 				var4 = var39 + var10; // L: 6702
 				if (var9 >= 0 && var10 >= 0 && var9 < 104 && var10 < 104 && var3 >= 0 && var4 >= 0 && var3 < 104 && var4 < 104 && var41 != 65535) { // L: 6703
@@ -169,7 +169,7 @@ public class UserComparator4 implements Comparator {
 
 			} else if (class194.field2343 == var0) { // L: 6714
 				var2 = var1.readUnsignedShort(); // L: 6715
-				var3 = var1.method5573(); // L: 6716
+				var3 = var1.readUnsignedByteSub(); // L: 6716
 				var4 = var3 >> 2; // L: 6717
 				var5 = var3 & 3; // L: 6718
 				var6 = Client.field708[var4]; // L: 6719
@@ -183,11 +183,11 @@ public class UserComparator4 implements Comparator {
 			} else {
 				TileItem var33;
 				if (class194.field2345 == var0) { // L: 6728
-					var2 = var1.method5582(); // L: 6729
-					var3 = var1.method5572(); // L: 6730
+					var2 = var1.readUnsignedShortAddLE(); // L: 6729
+					var3 = var1.readUnsignedByteNeg(); // L: 6730
 					var4 = (var3 >> 4 & 7) + PacketWriter.field1331; // L: 6731
 					var5 = (var3 & 7) + class248.field3222; // L: 6732
-					var6 = var1.method5582(); // L: 6733
+					var6 = var1.readUnsignedShortAddLE(); // L: 6733
 					if (var4 >= 0 && var5 >= 0 && var4 < 104 && var5 < 104) { // L: 6734
 						var33 = new TileItem(); // L: 6735
 						var33.id = var6; // L: 6736
@@ -201,12 +201,12 @@ public class UserComparator4 implements Comparator {
 					}
 
 				} else if (class194.field2350 == var0) { // L: 6744
-					var2 = var1.method5580(); // L: 6745
-					var3 = var1.method5572(); // L: 6746
+					var2 = var1.readUnsignedShortLE(); // L: 6745
+					var3 = var1.readUnsignedByteNeg(); // L: 6746
 					var4 = (var3 >> 4 & 7) + PacketWriter.field1331; // L: 6747
 					var5 = (var3 & 7) + class248.field3222; // L: 6748
-					var6 = var1.method5580(); // L: 6749
-					var7 = var1.method5580(); // L: 6750
+					var6 = var1.readUnsignedShortLE(); // L: 6749
+					var7 = var1.readUnsignedShortLE(); // L: 6750
 					if (var4 >= 0 && var5 >= 0 && var4 < 104 && var5 < 104) { // L: 6751
 						NodeDeque var34 = Client.groundItems[GameObject.Client_plane][var4][var5]; // L: 6752
 						if (var34 != null) { // L: 6753
@@ -222,8 +222,8 @@ public class UserComparator4 implements Comparator {
 					}
 
 				} else if (class194.field2348 == var0) { // L: 6767
-					var2 = var1.method5580(); // L: 6768
-					var3 = var1.method5572(); // L: 6769
+					var2 = var1.readUnsignedShortLE(); // L: 6768
+					var3 = var1.readUnsignedByteNeg(); // L: 6769
 					var4 = (var3 >> 4 & 7) + PacketWriter.field1331; // L: 6770
 					var5 = (var3 & 7) + class248.field3222; // L: 6771
 					if (var4 >= 0 && var5 >= 0 && var4 < 104 && var5 < 104) { // L: 6772
@@ -245,12 +245,12 @@ public class UserComparator4 implements Comparator {
 					}
 
 				} else if (class194.field2351 == var0) { // L: 6789
-					var2 = var1.method5572(); // L: 6790
+					var2 = var1.readUnsignedByteNeg(); // L: 6790
 					var3 = var2 >> 2; // L: 6791
 					var4 = var2 & 3; // L: 6792
 					var5 = Client.field708[var3]; // L: 6793
 					var6 = var1.readUnsignedShort(); // L: 6794
-					var7 = var1.method5572(); // L: 6795
+					var7 = var1.readUnsignedByteNeg(); // L: 6795
 					var8 = (var7 >> 4 & 7) + PacketWriter.field1331; // L: 6796
 					var9 = (var7 & 7) + class248.field3222; // L: 6797
 					if (var8 >= 0 && var9 >= 0 && var8 < 103 && var9 < 103) { // L: 6798
@@ -307,19 +307,19 @@ public class UserComparator4 implements Comparator {
 
 				} else {
 					if (class194.field2344 == var0) { // L: 6835
-						byte var37 = var1.method5645(); // L: 6836
-						var3 = var1.method5571(); // L: 6837
+						byte var37 = var1.readByteAdd(); // L: 6836
+						var3 = var1.readUnsignedByteAdd(); // L: 6837
 						var4 = var3 >> 2; // L: 6838
 						var5 = var3 & 3; // L: 6839
 						var6 = Client.field708[var4]; // L: 6840
-						byte var40 = var1.method5645(); // L: 6841
+						byte var40 = var1.readByteAdd(); // L: 6841
 						var8 = var1.readUnsignedShort(); // L: 6842
-						var9 = var1.method5572(); // L: 6843
+						var9 = var1.readUnsignedByteNeg(); // L: 6843
 						var10 = (var9 >> 4 & 7) + PacketWriter.field1331; // L: 6844
 						var11 = (var9 & 7) + class248.field3222; // L: 6845
 						byte var12 = var1.readByte(); // L: 6846
 						var13 = var1.readUnsignedShort(); // L: 6847
-						var14 = var1.method5539(); // L: 6848
+						var14 = var1.readUnsignedShortAdd(); // L: 6848
 						int var15 = var1.readUnsignedShort(); // L: 6849
 						byte var16 = var1.readByte(); // L: 6850
 						Player var17;
@@ -380,10 +380,10 @@ public class UserComparator4 implements Comparator {
 					}
 
 					if (class194.field2347 == var0) { // L: 6900
-						var2 = var1.method5572(); // L: 6901
+						var2 = var1.readUnsignedByteNeg(); // L: 6901
 						var3 = (var2 >> 4 & 7) + PacketWriter.field1331; // L: 6902
 						var4 = (var2 & 7) + class248.field3222; // L: 6903
-						var5 = var1.method5571(); // L: 6904
+						var5 = var1.readUnsignedByteAdd(); // L: 6904
 						var6 = var5 >> 2; // L: 6905
 						var7 = var5 & 3; // L: 6906
 						var8 = Client.field708[var6]; // L: 6907

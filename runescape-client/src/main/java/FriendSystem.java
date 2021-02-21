@@ -252,7 +252,7 @@ public class FriendSystem {
 			if (var2.hasCleanName()) { // L: 210
 				if (this.friendsList.removeByUsername(var2)) { // L: 211
 					Client.field879 = Client.cycleCntr; // L: 213
-					PacketBufferNode var3 = ItemContainer.getPacketBufferNode(ClientPacket.field2290, Client.packetWriter.isaacCipher); // L: 216
+					PacketBufferNode var3 = ItemContainer.getPacketBufferNode(ClientPacket.FRIENDLIST_DEL, Client.packetWriter.isaacCipher); // L: 216
 					var3.packetBuffer.writeByte(FloorDecoration.stringCp1252NullTerminatedByteSize(var1)); // L: 217
 					var3.packetBuffer.writeStringCp1252NullTerminated(var1); // L: 218
 					Client.packetWriter.addNode(var3); // L: 219
@@ -284,7 +284,7 @@ public class FriendSystem {
 			if (var2.hasCleanName()) { // L: 236
 				if (this.ignoreList.removeByUsername(var2)) { // L: 237
 					Client.field879 = Client.cycleCntr; // L: 239
-					PacketBufferNode var3 = ItemContainer.getPacketBufferNode(ClientPacket.field2318, Client.packetWriter.isaacCipher); // L: 242
+					PacketBufferNode var3 = ItemContainer.getPacketBufferNode(ClientPacket.IGNORELIST_DEL, Client.packetWriter.isaacCipher); // L: 242
 					var3.packetBuffer.writeByte(FloorDecoration.stringCp1252NullTerminatedByteSize(var1)); // L: 243
 					var3.packetBuffer.writeStringCp1252NullTerminated(var1); // L: 244
 					Client.packetWriter.addNode(var3); // L: 245

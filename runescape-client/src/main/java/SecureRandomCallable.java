@@ -235,7 +235,7 @@ public class SecureRandomCallable implements Callable {
 			}
 		}
 
-		PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.field2243, Client.packetWriter.isaacCipher); // L: 3861
+		PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.CLIENT_CHEAT, Client.packetWriter.isaacCipher); // L: 3861
 		var1.packetBuffer.writeByte(var0.length() + 1); // L: 3862
 		var1.packetBuffer.writeStringCp1252NullTerminated(var0); // L: 3863
 		Client.packetWriter.addNode(var1); // L: 3864

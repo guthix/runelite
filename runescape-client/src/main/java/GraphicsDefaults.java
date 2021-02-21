@@ -101,17 +101,17 @@ public class GraphicsDefaults {
 				var3.readMedium(); // L: 31
 				break; // L: 32
 			case 2:
-				this.compass = var3.method5559(); // L: 36
-				this.field3845 = var3.method5559(); // L: 37
-				this.mapScenes = var3.method5559(); // L: 38
-				this.headIconsPk = var3.method5559(); // L: 39
-				this.field3844 = var3.method5559(); // L: 40
-				this.field3843 = var3.method5559(); // L: 41
-				this.field3846 = var3.method5559(); // L: 42
-				this.field3847 = var3.method5559(); // L: 43
-				this.field3848 = var3.method5559(); // L: 44
-				this.field3849 = var3.method5559(); // L: 45
-				this.field3850 = var3.method5559(); // L: 46
+				this.compass = var3.readNullableLargeSmart(); // L: 36
+				this.field3845 = var3.readNullableLargeSmart(); // L: 37
+				this.mapScenes = var3.readNullableLargeSmart(); // L: 38
+				this.headIconsPk = var3.readNullableLargeSmart(); // L: 39
+				this.field3844 = var3.readNullableLargeSmart(); // L: 40
+				this.field3843 = var3.readNullableLargeSmart(); // L: 41
+				this.field3846 = var3.readNullableLargeSmart(); // L: 42
+				this.field3847 = var3.readNullableLargeSmart(); // L: 43
+				this.field3848 = var3.readNullableLargeSmart(); // L: 44
+				this.field3849 = var3.readNullableLargeSmart(); // L: 45
+				this.field3850 = var3.readNullableLargeSmart(); // L: 46
 			}
 		}
 	}

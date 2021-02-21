@@ -415,7 +415,7 @@ public class Varcs {
 	@Export("Clan_joinChat")
 	static final void Clan_joinChat(String var0) {
 		if (!var0.equals("")) { // L: 11029
-			PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.field2285, Client.packetWriter.isaacCipher); // L: 11031
+			PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.CLAN_JOINCHAT_LEAVECHAT, Client.packetWriter.isaacCipher); // L: 11031
 			var1.packetBuffer.writeByte(FloorDecoration.stringCp1252NullTerminatedByteSize(var0)); // L: 11032
 			var1.packetBuffer.writeStringCp1252NullTerminated(var0); // L: 11033
 			Client.packetWriter.addNode(var1); // L: 11034

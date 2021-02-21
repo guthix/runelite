@@ -22,7 +22,7 @@ public class class258 {
 			}
 
 			Client.tradeChatMode = Interpreter.Interpreter_intStack[VarcInt.Interpreter_intStackSize + 2]; // L: 2889
-			PacketBufferNode var18 = ItemContainer.getPacketBufferNode(ClientPacket.field2308, Client.packetWriter.isaacCipher); // L: 2891
+			PacketBufferNode var18 = ItemContainer.getPacketBufferNode(ClientPacket.CHAT_SETMODE, Client.packetWriter.isaacCipher); // L: 2891
 			var18.packetBuffer.writeByte(Client.publicChatMode); // L: 2892
 			var18.packetBuffer.writeByte(Client.privateChatMode.field3835); // L: 2893
 			var18.packetBuffer.writeByte(Client.tradeChatMode); // L: 2894
@@ -36,7 +36,7 @@ public class class258 {
 				VarcInt.Interpreter_intStackSize -= 2; // L: 2900
 				var11 = Interpreter.Interpreter_intStack[VarcInt.Interpreter_intStackSize]; // L: 2901
 				int var12 = Interpreter.Interpreter_intStack[VarcInt.Interpreter_intStackSize + 1]; // L: 2902
-				PacketBufferNode var13 = ItemContainer.getPacketBufferNode(ClientPacket.field2301, Client.packetWriter.isaacCipher); // L: 2904
+				PacketBufferNode var13 = ItemContainer.getPacketBufferNode(ClientPacket.PLAYER_REPORT, Client.packetWriter.isaacCipher); // L: 2904
 				var13.packetBuffer.writeByte(FloorDecoration.stringCp1252NullTerminatedByteSize(var3) + 2); // L: 2905
 				var13.packetBuffer.writeStringCp1252NullTerminated(var3); // L: 2906
 				var13.packetBuffer.writeByte(var11 - 1); // L: 2907
@@ -212,7 +212,7 @@ public class class258 {
 						}
 					}
 
-					PacketBufferNode var8 = ItemContainer.getPacketBufferNode(ClientPacket.field2304, Client.packetWriter.isaacCipher); // L: 3109
+					PacketBufferNode var8 = ItemContainer.getPacketBufferNode(ClientPacket.MESSAGE_PUBLIC, Client.packetWriter.isaacCipher); // L: 3109
 					var8.packetBuffer.writeByte(0); // L: 3110
 					int var9 = var8.packetBuffer.offset; // L: 3111
 					var8.packetBuffer.writeByte(var11); // L: 3112
@@ -226,7 +226,7 @@ public class class258 {
 					Interpreter.Interpreter_stringStackSize -= 2; // L: 3121
 					var3 = Interpreter.Interpreter_stringStack[Interpreter.Interpreter_stringStackSize]; // L: 3122
 					String var4 = Interpreter.Interpreter_stringStack[Interpreter.Interpreter_stringStackSize + 1]; // L: 3123
-					PacketBufferNode var5 = ItemContainer.getPacketBufferNode(ClientPacket.field2230, Client.packetWriter.isaacCipher); // L: 3125
+					PacketBufferNode var5 = ItemContainer.getPacketBufferNode(ClientPacket.MESSAGE_PRIVATE, Client.packetWriter.isaacCipher); // L: 3125
 					var5.packetBuffer.writeShort(0); // L: 3126
 					int var6 = var5.packetBuffer.offset; // L: 3127
 					var5.packetBuffer.writeStringCp1252NullTerminated(var3); // L: 3128

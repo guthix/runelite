@@ -626,7 +626,7 @@ public class ServerPacket {
 		garbageValue = "36"
 	)
 	static final void method3664() {
-		PacketBufferNode var0 = ItemContainer.getPacketBufferNode(ClientPacket.field2306, Client.packetWriter.isaacCipher); // L: 10786
+		PacketBufferNode var0 = ItemContainer.getPacketBufferNode(ClientPacket.CLOSE_MODAL, Client.packetWriter.isaacCipher); // L: 10786
 		Client.packetWriter.addNode(var0); // L: 10787
 
 		for (InterfaceParent var1 = (InterfaceParent)Client.interfaceParents.first(); var1 != null; var1 = (InterfaceParent)Client.interfaceParents.next()) { // L: 10788

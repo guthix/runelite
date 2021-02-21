@@ -196,7 +196,7 @@ public final class Tiles {
 	@Export("clanKickUser")
 	static final void clanKickUser(String var0) {
 		if (WorldMapArea.clanChat != null) { // L: 11021
-			PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.field2228, Client.packetWriter.isaacCipher); // L: 11022
+			PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.CLAN_KICKUSER, Client.packetWriter.isaacCipher); // L: 11022
 			var1.packetBuffer.writeByte(FloorDecoration.stringCp1252NullTerminatedByteSize(var0)); // L: 11023
 			var1.packetBuffer.writeStringCp1252NullTerminated(var0); // L: 11024
 			Client.packetWriter.addNode(var1); // L: 11025

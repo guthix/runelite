@@ -57,10 +57,10 @@ public class GrandExchangeOfferOwnWorldComparator implements Comparator {
 		garbageValue = "-812111829"
 	)
 	static final void method1359(String var0, int var1) {
-		PacketBufferNode var2 = ItemContainer.getPacketBufferNode(ClientPacket.field2292, Client.packetWriter.isaacCipher); // L: 252
+		PacketBufferNode var2 = ItemContainer.getPacketBufferNode(ClientPacket.CLAN_SETRANK, Client.packetWriter.isaacCipher); // L: 252
 		var2.packetBuffer.writeByte(FloorDecoration.stringCp1252NullTerminatedByteSize(var0) + 1); // L: 253
 		var2.packetBuffer.writeStringCp1252NullTerminated(var0); // L: 254
-		var2.packetBuffer.method5569(var1); // L: 255
+		var2.packetBuffer.writeByteNeg(var1); // L: 255
 		Client.packetWriter.addNode(var2); // L: 256
 	} // L: 257
 }

@@ -187,7 +187,7 @@ public final class BZip2State {
 	)
 	@Export("Clan_leaveChat")
 	static final void Clan_leaveChat() {
-		PacketBufferNode var0 = ItemContainer.getPacketBufferNode(ClientPacket.field2285, Client.packetWriter.isaacCipher); // L: 11039
+		PacketBufferNode var0 = ItemContainer.getPacketBufferNode(ClientPacket.CLAN_JOINCHAT_LEAVECHAT, Client.packetWriter.isaacCipher); // L: 11039
 		var0.packetBuffer.writeByte(0); // L: 11040
 		Client.packetWriter.addNode(var0); // L: 11041
 	} // L: 11042

@@ -562,12 +562,12 @@ public final class WorldMapManager {
 	static final void method709(PacketBuffer var0, int var1, Player var2, int var3) {
 		byte var4 = -1; // L: 453
 		if ((var3 & 256) != 0) { // L: 454
-			var2.field981 = var0.method5665(); // L: 455
-			var2.field982 = var0.method5665(); // L: 456
-			var2.field958 = var0.method5665(); // L: 457
-			var2.field956 = var0.method5661(); // L: 458
-			var2.field984 = var0.method5582() + Client.cycle; // L: 459
-			var2.field973 = var0.method5539() + Client.cycle; // L: 460
+			var2.field981 = var0.readByteSub(); // L: 455
+			var2.field982 = var0.readByteSub(); // L: 456
+			var2.field958 = var0.readByteSub(); // L: 457
+			var2.field956 = var0.readByteNeg(); // L: 458
+			var2.field984 = var0.readUnsignedShortAddLE() + Client.cycle; // L: 459
+			var2.field973 = var0.readUnsignedShortAdd() + Client.cycle; // L: 460
 			var2.field986 = var0.readUnsignedShort(); // L: 461
 			if (var2.field631) { // L: 462
 				var2.field981 += var2.tileX; // L: 463
@@ -606,10 +606,10 @@ public final class WorldMapManager {
 		int var9;
 		int var12;
 		if ((var3 & 128) != 0) { // L: 492
-			var5 = var0.method5582(); // L: 493
-			PlayerType var6 = (PlayerType)UrlRequester.findEnumerated(class234.PlayerType_values(), var0.method5571()); // L: 494
+			var5 = var0.readUnsignedShortAddLE(); // L: 493
+			PlayerType var6 = (PlayerType)UrlRequester.findEnumerated(class234.PlayerType_values(), var0.readUnsignedByteAdd()); // L: 494
 			boolean var7 = var0.readUnsignedByte() == 1; // L: 495
-			var8 = var0.method5572(); // L: 496
+			var8 = var0.readUnsignedByteNeg(); // L: 496
 			var9 = var0.offset; // L: 497
 			if (var2.username != null && var2.appearance != null) { // L: 498
 				boolean var10 = false; // L: 499
@@ -619,7 +619,7 @@ public final class WorldMapManager {
 
 				if (!var10 && Client.field762 == 0 && !var2.isHidden) { // L: 503
 					Players.field1264.offset = 0; // L: 504
-					var0.method5593(Players.field1264.array, 0, var8); // L: 505
+					var0.readBytesReversed(Players.field1264.array, 0, var8); // L: 505
 					Players.field1264.offset = 0; // L: 506
 					String var11 = AbstractFont.escapeBrackets(ServerPacket.method3663(AttackOption.method2135(Players.field1264))); // L: 507
 					var2.overheadText = var11.trim(); // L: 508
@@ -652,7 +652,7 @@ public final class WorldMapManager {
 		}
 
 		if ((var3 & 8) != 0) { // L: 526
-			var2.field959 = var0.method5582(); // L: 527
+			var2.field959 = var0.readUnsignedShortAddLE(); // L: 527
 			if (var2.pathLength == 0) { // L: 528
 				var2.orientation = var2.field959; // L: 529
 				var2.field959 = -1; // L: 530
@@ -661,7 +661,7 @@ public final class WorldMapManager {
 
 		int var13;
 		if ((var3 & 16) != 0) { // L: 533
-			var5 = var0.method5571(); // L: 534
+			var5 = var0.readUnsignedByteAdd(); // L: 534
 			int var15;
 			int var17;
 			int var19;
@@ -687,15 +687,15 @@ public final class WorldMapManager {
 				}
 			}
 
-			var13 = var0.method5572(); // L: 556
+			var13 = var0.readUnsignedByteNeg(); // L: 556
 			if (var13 > 0) { // L: 557
 				for (var17 = 0; var17 < var13; ++var17) { // L: 558
 					var8 = var0.readUShortSmart(); // L: 559
 					var9 = var0.readUShortSmart(); // L: 560
 					if (var9 != 32767) { // L: 561
 						var19 = var0.readUShortSmart(); // L: 562
-						var15 = var0.method5572(); // L: 563
-						var12 = var9 > 0 ? var0.method5573() : var15; // L: 564
+						var15 = var0.readUnsignedByteNeg(); // L: 563
+						var12 = var9 > 0 ? var0.readUnsignedByteSub() : var15; // L: 564
 						var2.addHealthBar(var8, Client.cycle, var9, var19, var15, var12); // L: 565
 					} else {
 						var2.removeHealthBar(var8); // L: 567
@@ -705,19 +705,19 @@ public final class WorldMapManager {
 		}
 
 		if ((var3 & 512) != 0) { // L: 571
-			Players.field1253[var1] = var0.method5661(); // L: 572
+			Players.field1253[var1] = var0.readByteNeg(); // L: 572
 		}
 
 		if ((var3 & 1) != 0) { // L: 574
-			var2.targetIndex = var0.method5539(); // L: 575
+			var2.targetIndex = var0.readUnsignedShortAdd(); // L: 575
 			if (var2.targetIndex == 65535) { // L: 576
 				var2.targetIndex = -1;
 			}
 		}
 
 		if ((var3 & 4096) != 0) { // L: 578
-			var2.spotAnimation = var0.method5539(); // L: 579
-			var5 = var0.method5643(); // L: 580
+			var2.spotAnimation = var0.readUnsignedShortAdd(); // L: 579
+			var5 = var0.readUnsignedIntLE(); // L: 580
 			var2.field979 = var5 >> 16; // L: 581
 			var2.field978 = (var5 & 65535) + Client.cycle; // L: 582
 			var2.spotAnimationFrame = 0; // L: 583
@@ -732,24 +732,24 @@ public final class WorldMapManager {
 		}
 
 		if ((var3 & 2048) != 0) { // L: 588
-			var4 = var0.method5665(); // L: 589
+			var4 = var0.readByteSub(); // L: 589
 		}
 
 		if ((var3 & 2) != 0) { // L: 591
-			var5 = var0.method5539(); // L: 592
+			var5 = var0.readUnsignedShortAdd(); // L: 592
 			if (var5 == 65535) { // L: 593
 				var5 = -1;
 			}
 
-			var13 = var0.method5571(); // L: 594
+			var13 = var0.readUnsignedByteAdd(); // L: 594
 			Tiles.performPlayerAnimation(var2, var5, var13); // L: 595
 		}
 
 		if ((var3 & 4) != 0) { // L: 597
-			var5 = var0.method5573(); // L: 598
+			var5 = var0.readUnsignedByteSub(); // L: 598
 			byte[] var16 = new byte[var5]; // L: 599
 			Buffer var14 = new Buffer(var16); // L: 600
-			var0.method5733(var16, 0, var5); // L: 601
+			var0.readBytesAdd(var16, 0, var5); // L: 601
 			Players.field1254[var1] = var14; // L: 602
 			var2.read(var14); // L: 603
 		}

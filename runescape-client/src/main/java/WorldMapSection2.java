@@ -197,7 +197,7 @@ public class WorldMapSection2 implements WorldMapSection {
 		if (Client.packetWriter.pendingWrites >= 50 || var0) { // L: 5473
 			Client.packetWriter.pendingWrites = 0; // L: 5474
 			if (!Client.field696 && Client.packetWriter.getSocket() != null) { // L: 5475
-				PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.field2322, Client.packetWriter.isaacCipher); // L: 5477
+				PacketBufferNode var1 = ItemContainer.getPacketBufferNode(ClientPacket.NO_TIMEOUT, Client.packetWriter.isaacCipher); // L: 5477
 				Client.packetWriter.addNode(var1); // L: 5478
 
 				try {

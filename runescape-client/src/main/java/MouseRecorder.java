@@ -109,7 +109,7 @@ public class MouseRecorder implements Runnable {
 		garbageValue = "-2045975634"
 	)
 	static void method1264() {
-		PacketBufferNode var0 = ItemContainer.getPacketBufferNode(ClientPacket.field2273, Client.packetWriter.isaacCipher); // L: 4192
+		PacketBufferNode var0 = ItemContainer.getPacketBufferNode(ClientPacket.WINDOW_STATUS, Client.packetWriter.isaacCipher); // L: 4192
 		var0.packetBuffer.writeByte(SoundSystem.getWindowedMode()); // L: 4193
 		var0.packetBuffer.writeShort(IgnoreList.canvasWidth); // L: 4194
 		var0.packetBuffer.writeShort(ModelData0.canvasHeight); // L: 4195

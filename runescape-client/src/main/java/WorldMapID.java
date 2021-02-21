@@ -79,7 +79,7 @@ public class WorldMapID {
 					var16 = class279.parseInt(var7);
 				}
 
-				PacketBufferNode var14 = ItemContainer.getPacketBufferNode(ClientPacket.field2291, Client.packetWriter.isaacCipher); // L: 1348
+				PacketBufferNode var14 = ItemContainer.getPacketBufferNode(ClientPacket.RESUME_P_COUNTDIALOG, Client.packetWriter.isaacCipher); // L: 1348
 				var14.packetBuffer.writeInt(var16); // L: 1349
 				Client.packetWriter.addNode(var14); // L: 1350
 				return 1; // L: 1351
@@ -87,14 +87,14 @@ public class WorldMapID {
 				PacketBufferNode var12;
 				if (var0 == ScriptOpcodes.RESUME_NAMEDIALOG) {
 					var7 = Interpreter.Interpreter_stringStack[--Interpreter.Interpreter_stringStackSize]; // L: 1354
-					var12 = ItemContainer.getPacketBufferNode(ClientPacket.field2245, Client.packetWriter.isaacCipher); // L: 1356
+					var12 = ItemContainer.getPacketBufferNode(ClientPacket.RESUME_P_NAMEDIALOG, Client.packetWriter.isaacCipher); // L: 1356
 					var12.packetBuffer.writeByte(var7.length() + 1); // L: 1357
 					var12.packetBuffer.writeStringCp1252NullTerminated(var7); // L: 1358
 					Client.packetWriter.addNode(var12); // L: 1359
 					return 1; // L: 1360
 				} else if (var0 == ScriptOpcodes.RESUME_STRINGDIALOG) {
 					var7 = Interpreter.Interpreter_stringStack[--Interpreter.Interpreter_stringStackSize]; // L: 1363
-					var12 = ItemContainer.getPacketBufferNode(ClientPacket.field2261, Client.packetWriter.isaacCipher); // L: 1365
+					var12 = ItemContainer.getPacketBufferNode(ClientPacket.RESUME_P_STRINGDIALOG, Client.packetWriter.isaacCipher); // L: 1365
 					var12.packetBuffer.writeByte(var7.length() + 1); // L: 1366
 					var12.packetBuffer.writeStringCp1252NullTerminated(var7); // L: 1367
 					Client.packetWriter.addNode(var12); // L: 1368
@@ -139,7 +139,7 @@ public class WorldMapID {
 						return 1; // L: 1411
 					} else if (var0 == ScriptOpcodes.RESUME_OBJDIALOG) {
 						var10 = Interpreter.Interpreter_intStack[--VarcInt.Interpreter_intStackSize]; // L: 1414
-						var12 = ItemContainer.getPacketBufferNode(ClientPacket.field2250, Client.packetWriter.isaacCipher); // L: 1416
+						var12 = ItemContainer.getPacketBufferNode(ClientPacket.RESUME_P_OBJDIALOG, Client.packetWriter.isaacCipher); // L: 1416
 						var12.packetBuffer.writeShort(var10); // L: 1417
 						Client.packetWriter.addNode(var12); // L: 1418
 						return 1; // L: 1419
@@ -153,7 +153,7 @@ public class WorldMapID {
 						} else if (var5.length() > 500) { // L: 1427
 							return 1;
 						} else {
-							PacketBufferNode var6 = ItemContainer.getPacketBufferNode(ClientPacket.field2270, Client.packetWriter.isaacCipher); // L: 1428
+							PacketBufferNode var6 = ItemContainer.getPacketBufferNode(ClientPacket.BUG_REPORT, Client.packetWriter.isaacCipher); // L: 1428
 							var6.packetBuffer.writeShort(1 + FloorDecoration.stringCp1252NullTerminatedByteSize(var4) + FloorDecoration.stringCp1252NullTerminatedByteSize(var5)); // L: 1429
 							var6.packetBuffer.writeByte(var10); // L: 1430
 							var6.packetBuffer.writeStringCp1252NullTerminated(var4); // L: 1431

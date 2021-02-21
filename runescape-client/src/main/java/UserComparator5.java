@@ -173,11 +173,11 @@ public class UserComparator5 extends AbstractUserComparator {
 					int var10 = var8 * var5 - var7 * var4 >> 11; // L: 3797
 					int var11 = var9 + PlayerComposition.localPlayer.x >> 7; // L: 3798
 					int var12 = PlayerComposition.localPlayer.y - var10 >> 7; // L: 3799
-					PacketBufferNode var13 = ItemContainer.getPacketBufferNode(ClientPacket.field2272, Client.packetWriter.isaacCipher); // L: 3801
+					PacketBufferNode var13 = ItemContainer.getPacketBufferNode(ClientPacket.MOVE_MINIMAP_CLICK, Client.packetWriter.isaacCipher); // L: 3801
 					var13.packetBuffer.writeByte(18); // L: 3802
-					var13.packetBuffer.method5739(var11 + NetFileRequest.baseX); // L: 3803
-					var13.packetBuffer.writeIntME(KeyHandler.KeyHandler_pressedKeys[82] ? (KeyHandler.KeyHandler_pressedKeys[81] ? 2 : 1) : 0); // L: 3804
-					var13.packetBuffer.writeShortLE(var12 + class41.baseY); // L: 3805
+					var13.packetBuffer.writeShortLE(var11 + NetFileRequest.baseX); // L: 3803
+					var13.packetBuffer.writeByteSub(KeyHandler.KeyHandler_pressedKeys[82] ? (KeyHandler.KeyHandler_pressedKeys[81] ? 2 : 1) : 0); // L: 3804
+					var13.packetBuffer.writeShortAddLE(var12 + class41.baseY); // L: 3805
 					var13.packetBuffer.writeByte(var4); // L: 3806
 					var13.packetBuffer.writeByte(var5); // L: 3807
 					var13.packetBuffer.writeShort(Client.camAngleY); // L: 3808

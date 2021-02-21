@@ -122,7 +122,7 @@ public class HealthBarUpdate extends Node {
 			}
 
 			if (var1 == 326) { // L: 10860
-				PacketBufferNode var4 = ItemContainer.getPacketBufferNode(ClientPacket.field2239, Client.packetWriter.isaacCipher); // L: 10862
+				PacketBufferNode var4 = ItemContainer.getPacketBufferNode(ClientPacket.UPDATE_APPEARANCE, Client.packetWriter.isaacCipher); // L: 10862
 				Client.playerComposition.write(var4.packetBuffer); // L: 10863
 				Client.packetWriter.addNode(var4); // L: 10864
 				return true; // L: 10865

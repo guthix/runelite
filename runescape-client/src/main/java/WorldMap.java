@@ -466,10 +466,10 @@ public class WorldMap {
 					int var14 = this.mouseCoord.x; // L: 218
 					var10 = this.mouseCoord.y; // L: 219
 					var11 = this.mouseCoord.plane; // L: 220
-					PacketBufferNode var12 = ItemContainer.getPacketBufferNode(ClientPacket.field2269, Client.packetWriter.isaacCipher); // L: 223
-					var12.packetBuffer.method5578(var14); // L: 224
-					var12.packetBuffer.method5587(0); // L: 225
-					var12.packetBuffer.method5739(var10); // L: 226
+					PacketBufferNode var12 = ItemContainer.getPacketBufferNode(ClientPacket.CLICKWORLDMAP_TELEPORT, Client.packetWriter.isaacCipher); // L: 223
+					var12.packetBuffer.writeShortAdd(var14); // L: 224
+					var12.packetBuffer.writeIntLE(0); // L: 225
+					var12.packetBuffer.writeShortLE(var10); // L: 226
 					var12.packetBuffer.writeByte(var11); // L: 227
 					Client.packetWriter.addNode(var12); // L: 228
 				} else {
@@ -483,8 +483,8 @@ public class WorldMap {
 					}
 
 					if (var9) { // L: 240
-						PacketBufferNode var13 = ItemContainer.getPacketBufferNode(ClientPacket.field2328, Client.packetWriter.isaacCipher); // L: 241
-						var13.packetBuffer.method5587(this.mouseCoord.packed()); // L: 242
+						PacketBufferNode var13 = ItemContainer.getPacketBufferNode(ClientPacket.CLICKWORLDMAP, Client.packetWriter.isaacCipher); // L: 241
+						var13.packetBuffer.writeIntLE(this.mouseCoord.packed()); // L: 242
 						Client.packetWriter.addNode(var13); // L: 243
 						this.field4034 = 0L; // L: 244
 					}

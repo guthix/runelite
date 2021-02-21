@@ -210,7 +210,7 @@ public class DynamicObject extends Renderable
 	)
 	@Export("resumePauseWidget")
 	static void resumePauseWidget(int var0, int var1) {
-		PacketBufferNode var2 = ItemContainer.getPacketBufferNode(ClientPacket.field2266, Client.packetWriter.isaacCipher); // L: 8361
+		PacketBufferNode var2 = ItemContainer.getPacketBufferNode(ClientPacket.RESUME_PAUSEBUTTON, Client.packetWriter.isaacCipher); // L: 8361
 		var2.packetBuffer.writeInt(var0); // L: 8362
 		var2.packetBuffer.writeShort(var1); // L: 8363
 		Client.packetWriter.addNode(var2); // L: 8364

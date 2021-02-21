@@ -200,10 +200,10 @@ public class SecureRandomFuture {
 				var15 = PlayerComposition.localPlayer.plane; // L: 4382
 				var16 = (oculusOrbFocalPointX >> 7) + NetFileRequest.baseX; // L: 4383
 				var17 = (Decimator.oculusOrbFocalPointY >> 7) + class41.baseY; // L: 4384
-				PacketBufferNode var18 = ItemContainer.getPacketBufferNode(ClientPacket.field2269, Client.packetWriter.isaacCipher); // L: 4387
-				var18.packetBuffer.method5578(var16); // L: 4388
-				var18.packetBuffer.method5587(Client.field730); // L: 4389
-				var18.packetBuffer.method5739(var17); // L: 4390
+				PacketBufferNode var18 = ItemContainer.getPacketBufferNode(ClientPacket.CLICKWORLDMAP_TELEPORT, Client.packetWriter.isaacCipher); // L: 4387
+				var18.packetBuffer.writeShortAdd(var16); // L: 4388
+				var18.packetBuffer.writeIntLE(Client.field730); // L: 4389
+				var18.packetBuffer.writeShortLE(var17); // L: 4390
 				var18.packetBuffer.writeByte(var15); // L: 4391
 				Client.packetWriter.addNode(var18); // L: 4392
 			}

@@ -209,7 +209,7 @@ public class class3 implements Enumerated {
 				if (var7) { // L: 8387
 					PacketBufferNode var10;
 					if (var0 == 1) { // L: 8390
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2240, Client.packetWriter.isaacCipher); // L: 8392
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON1, Client.packetWriter.isaacCipher); // L: 8392
 						var10.packetBuffer.writeInt(var1); // L: 8393
 						var10.packetBuffer.writeShort(var2); // L: 8394
 						var10.packetBuffer.writeShort(var3); // L: 8395
@@ -217,7 +217,7 @@ public class class3 implements Enumerated {
 					}
 
 					if (var0 == 2) { // L: 8398
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2286, Client.packetWriter.isaacCipher); // L: 8400
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON2, Client.packetWriter.isaacCipher); // L: 8400
 						var10.packetBuffer.writeInt(var1); // L: 8401
 						var10.packetBuffer.writeShort(var2); // L: 8402
 						var10.packetBuffer.writeShort(var3); // L: 8403
@@ -225,7 +225,7 @@ public class class3 implements Enumerated {
 					}
 
 					if (var0 == 3) { // L: 8406
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2249, Client.packetWriter.isaacCipher); // L: 8408
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON3, Client.packetWriter.isaacCipher); // L: 8408
 						var10.packetBuffer.writeInt(var1); // L: 8409
 						var10.packetBuffer.writeShort(var2); // L: 8410
 						var10.packetBuffer.writeShort(var3); // L: 8411
@@ -233,7 +233,7 @@ public class class3 implements Enumerated {
 					}
 
 					if (var0 == 4) { // L: 8414
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2320, Client.packetWriter.isaacCipher); // L: 8416
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON4, Client.packetWriter.isaacCipher); // L: 8416
 						var10.packetBuffer.writeInt(var1); // L: 8417
 						var10.packetBuffer.writeShort(var2); // L: 8418
 						var10.packetBuffer.writeShort(var3); // L: 8419
@@ -241,7 +241,7 @@ public class class3 implements Enumerated {
 					}
 
 					if (var0 == 5) { // L: 8422
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2247, Client.packetWriter.isaacCipher); // L: 8424
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON5, Client.packetWriter.isaacCipher); // L: 8424
 						var10.packetBuffer.writeInt(var1); // L: 8425
 						var10.packetBuffer.writeShort(var2); // L: 8426
 						var10.packetBuffer.writeShort(var3); // L: 8427
@@ -249,7 +249,7 @@ public class class3 implements Enumerated {
 					}
 
 					if (var0 == 6) { // L: 8430
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2289, Client.packetWriter.isaacCipher); // L: 8432
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON6, Client.packetWriter.isaacCipher); // L: 8432
 						var10.packetBuffer.writeInt(var1); // L: 8433
 						var10.packetBuffer.writeShort(var2); // L: 8434
 						var10.packetBuffer.writeShort(var3); // L: 8435
@@ -257,7 +257,7 @@ public class class3 implements Enumerated {
 					}
 
 					if (var0 == 7) { // L: 8438
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2316, Client.packetWriter.isaacCipher); // L: 8440
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON7, Client.packetWriter.isaacCipher); // L: 8440
 						var10.packetBuffer.writeInt(var1); // L: 8441
 						var10.packetBuffer.writeShort(var2); // L: 8442
 						var10.packetBuffer.writeShort(var3); // L: 8443
@@ -265,7 +265,7 @@ public class class3 implements Enumerated {
 					}
 
 					if (var0 == 8) { // L: 8446
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2252, Client.packetWriter.isaacCipher); // L: 8448
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON8, Client.packetWriter.isaacCipher); // L: 8448
 						var10.packetBuffer.writeInt(var1); // L: 8449
 						var10.packetBuffer.writeShort(var2); // L: 8450
 						var10.packetBuffer.writeShort(var3); // L: 8451
@@ -273,7 +273,7 @@ public class class3 implements Enumerated {
 					}
 
 					if (var0 == 9) { // L: 8454
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2307, Client.packetWriter.isaacCipher); // L: 8456
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON9, Client.packetWriter.isaacCipher); // L: 8456
 						var10.packetBuffer.writeInt(var1); // L: 8457
 						var10.packetBuffer.writeShort(var2); // L: 8458
 						var10.packetBuffer.writeShort(var3); // L: 8459
@@ -281,7 +281,7 @@ public class class3 implements Enumerated {
 					}
 
 					if (var0 == 10) { // L: 8462
-						var10 = ItemContainer.getPacketBufferNode(ClientPacket.field2231, Client.packetWriter.isaacCipher); // L: 8464
+						var10 = ItemContainer.getPacketBufferNode(ClientPacket.IF_BUTTON10, Client.packetWriter.isaacCipher); // L: 8464
 						var10.packetBuffer.writeInt(var1); // L: 8465
 						var10.packetBuffer.writeShort(var2); // L: 8466
 						var10.packetBuffer.writeShort(var3); // L: 8467
