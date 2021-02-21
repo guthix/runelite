@@ -4364,7 +4364,7 @@ public final class Client extends GameEngine implements Usernamed {
 				int var16;
 				String var44;
 				boolean var46;
-				if (ServerPacket.field2139 == var1.serverPacket) { // L: 5663
+				if (ServerPacket.MESSAGE_GAME == var1.serverPacket) { // L: 5663
 					var16 = var3.readUShortSmart(); // L: 5664
 					var46 = var3.readUnsignedByte() == 1; // L: 5665
 					var44 = ""; // L: 5666
@@ -4385,7 +4385,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5675
 				}
 
-				if (ServerPacket.field2172 == var1.serverPacket) { // L: 5677
+				if (ServerPacket.MIDI_SONG == var1.serverPacket) { // L: 5677
 					var16 = var3.method5539(); // L: 5678
 					if (var16 == 65535) { // L: 5679
 						var16 = -1;
@@ -4396,7 +4396,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5682
 				}
 
-				if (ServerPacket.field2188 == var1.serverPacket) { // L: 5684
+				if (ServerPacket.MIDI_JINGLE == var1.serverPacket) { // L: 5684
 					var16 = var3.readUnsignedShort(); // L: 5685
 					if (var16 == 65535) { // L: 5686
 						var16 = -1;
@@ -4408,7 +4408,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5690
 				}
 
-				if (ServerPacket.field2187 == var1.serverPacket) { // L: 5692
+				if (ServerPacket.RESET_CLIENT_VARCACHE == var1.serverPacket) { // L: 5692
 					for (var16 = 0; var16 < VarpDefinition.VarpDefinition_fileCount; ++var16) { // L: 5693
 						VarpDefinition var56 = class219.VarpDefinition_get(var16); // L: 5694
 						if (var56 != null) { // L: 5695
@@ -4423,27 +4423,27 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5703
 				}
 
-				if (ServerPacket.field2157 == var1.serverPacket) { // L: 5705
+				if (ServerPacket.NPC_INFO_SMALL_VIEWPORT == var1.serverPacket) { // L: 5705
 					WorldMapData_0.updateNpcs(false, var3); // L: 5706
 					var1.serverPacket = null; // L: 5707
 					return true; // L: 5708
 				}
 
-				if (ServerPacket.field2145 == var1.serverPacket) { // L: 5710
+				if (ServerPacket.CAM2_ENABLE == var1.serverPacket) { // L: 5710
 					var16 = var3.readUnsignedByte(); // L: 5711
 					FontName.method5354(var16); // L: 5712
 					var1.serverPacket = null; // L: 5713
 					return true; // L: 5714
 				}
 
-				if (ServerPacket.field2152 == var1.serverPacket) { // L: 5716
+				if (ServerPacket.OBJ_ADD == var1.serverPacket) { // L: 5716
 					UserComparator4.method3465(class194.field2345); // L: 5717
 					var1.serverPacket = null; // L: 5718
 					return true; // L: 5719
 				}
 
 				String var38;
-				if (ServerPacket.field2189 == var1.serverPacket) { // L: 5721
+				if (ServerPacket.RUNCLIENTSCRIPT == var1.serverPacket) { // L: 5721
 					var38 = var3.readStringCp1252NullTerminated(); // L: 5722
 					Object[] var55 = new Object[var38.length() + 1]; // L: 5723
 
@@ -4463,7 +4463,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5733
 				}
 
-				if (ServerPacket.field2217 == var1.serverPacket) { // L: 5735
+				if (ServerPacket.UPDATE_CLANCHAT_SINGLE_USER == var1.serverPacket) { // L: 5735
 					if (WorldMapArea.clanChat != null) { // L: 5736
 						WorldMapArea.clanChat.method5251(var3); // L: 5737
 					}
@@ -4473,19 +4473,19 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5741
 				}
 
-				if (ServerPacket.field2175 == var1.serverPacket) { // L: 5743
+				if (ServerPacket.NPC_INFO_LARGE_VIEWPORT == var1.serverPacket) { // L: 5743
 					WorldMapData_0.updateNpcs(true, var3); // L: 5744
 					var1.serverPacket = null; // L: 5745
 					return true; // L: 5746
 				}
 
-				if (ServerPacket.field2176 == var1.serverPacket) { // L: 5748
+				if (ServerPacket.REFLECTION_CHECKER == var1.serverPacket) { // L: 5748
 					SoundSystem.readReflectionCheck(var3, var1.serverPacketLength); // L: 5749
 					var1.serverPacket = null; // L: 5750
 					return true; // L: 5751
 				}
 
-				if (ServerPacket.field2174 == var1.serverPacket) { // L: 5753
+				if (ServerPacket.UPDATE_STOCKMARKET_SLOT == var1.serverPacket) { // L: 5753
 					var16 = var3.readUnsignedByte(); // L: 5754
 					if (var3.readUnsignedByte() == 0) { // L: 5755
 						grandExchangeOffers[var16] = new GrandExchangeOffer(); // L: 5756
@@ -4501,7 +4501,7 @@ public final class Client extends GameEngine implements Usernamed {
 				}
 
 				Widget var51;
-				if (ServerPacket.field2150 == var1.serverPacket) { // L: 5767
+				if (ServerPacket.IF_SETPLAYERHEAD == var1.serverPacket) { // L: 5767
 					var16 = var3.readInt(); // L: 5768
 					var51 = CollisionMap.getWidget(var16); // L: 5769
 					var51.modelType = 3; // L: 5770
@@ -4517,7 +4517,7 @@ public final class Client extends GameEngine implements Usernamed {
 				int var19;
 				InterfaceParent var20;
 				int var21;
-				if (ServerPacket.field2184 == var1.serverPacket) { // L: 5776
+				if (ServerPacket.UNKNOWN_5 == var1.serverPacket) { // L: 5776
 					var16 = var3.offset + var1.serverPacketLength; // L: 5777
 					var5 = var3.readUnsignedShort(); // L: 5778
 					var18 = var3.readUnsignedShort(); // L: 5779
@@ -4574,7 +4574,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5817
 				}
 
-				if (ServerPacket.field2143 == var1.serverPacket) { // L: 5819
+				if (ServerPacket.UPDATE_ZONE_PARTIAL_ENCLOSED == var1.serverPacket) { // L: 5819
 					class248.field3222 = var3.method5573(); // L: 5820
 					PacketWriter.field1331 = var3.method5573(); // L: 5821
 
@@ -4588,7 +4588,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5828
 				}
 
-				if (ServerPacket.field2199 == var1.serverPacket) { // L: 5830
+				if (ServerPacket.HINT_ARROW == var1.serverPacket) { // L: 5830
 					hintArrowType = var3.readUnsignedByte(); // L: 5831
 					if (hintArrowType == 1) { // L: 5832
 						hintArrowNpcIndex = var3.readUnsignedShort();
@@ -4634,13 +4634,13 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5861
 				}
 
-				if (ServerPacket.field2154 == var1.serverPacket) { // L: 5863
+				if (ServerPacket.OBJ_DEL == var1.serverPacket) { // L: 5863
 					UserComparator4.method3465(class194.field2348); // L: 5864
 					var1.serverPacket = null; // L: 5865
 					return true; // L: 5866
 				}
 
-				if (ServerPacket.field2149 == var1.serverPacket) { // L: 5868
+				if (ServerPacket.SYNTH_SOUND == var1.serverPacket) { // L: 5868
 					var16 = var3.readUnsignedShort(); // L: 5869
 					var5 = var3.readUnsignedByte(); // L: 5870
 					var18 = var3.readUnsignedShort(); // L: 5871
@@ -4650,7 +4650,7 @@ public final class Client extends GameEngine implements Usernamed {
 				}
 
 				Widget var40;
-				if (ServerPacket.field2191 == var1.serverPacket) { // L: 5876
+				if (ServerPacket.IF_SETSCROLLPOS == var1.serverPacket) { // L: 5876
 					var16 = var3.method5582(); // L: 5877
 					var5 = var3.readInt(); // L: 5878
 					var40 = CollisionMap.getWidget(var5); // L: 5879
@@ -4673,13 +4673,13 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5889
 				}
 
-				if (ServerPacket.field2219 == var1.serverPacket) { // L: 5891
+				if (ServerPacket.MINIMAP_TOGGLE == var1.serverPacket) { // L: 5891
 					minimapState = var3.readUnsignedByte(); // L: 5892
 					var1.serverPacket = null; // L: 5893
 					return true; // L: 5894
 				}
 
-				if (ServerPacket.field2169 == var1.serverPacket) { // L: 5896
+				if (ServerPacket.CAM_SHAKE == var1.serverPacket) { // L: 5896
 					var16 = var3.readUnsignedByte(); // L: 5897
 					var5 = var3.readUnsignedByte(); // L: 5898
 					var18 = var3.readUnsignedByte(); // L: 5899
@@ -4693,7 +4693,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5907
 				}
 
-				if (ServerPacket.field2214 == var1.serverPacket) { // L: 5909
+				if (ServerPacket.RESET_ANIMS == var1.serverPacket) { // L: 5909
 					for (var16 = 0; var16 < players.length; ++var16) { // L: 5910
 						if (players[var16] != null) { // L: 5911
 							players[var16].sequence = -1;
@@ -4710,20 +4710,20 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5917
 				}
 
-				if (ServerPacket.field2165 == var1.serverPacket) { // L: 5919
+				if (ServerPacket.LOC_ANIM == var1.serverPacket) { // L: 5919
 					UserComparator4.method3465(class194.field2351); // L: 5920
 					var1.serverPacket = null; // L: 5921
 					return true; // L: 5922
 				}
 
-				if (ServerPacket.field2215 == var1.serverPacket) { // L: 5924
+				if (ServerPacket.UPDATE_REBOOT_TIMER == var1.serverPacket) { // L: 5924
 					rebootTimer = var3.method5582() * 30; // L: 5925
 					field845 = cycleCntr; // L: 5926
 					var1.serverPacket = null; // L: 5927
 					return true; // L: 5928
 				}
 
-				if (ServerPacket.field2153 == var1.serverPacket) { // L: 5930
+				if (ServerPacket.IF_SETANIM == var1.serverPacket) { // L: 5930
 					var16 = var3.method5643(); // L: 5931
 					var5 = var3.method5583(); // L: 5932
 					var40 = CollisionMap.getWidget(var16); // L: 5933
@@ -4738,7 +4738,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5941
 				}
 
-				if (ServerPacket.field2207 == var1.serverPacket) { // L: 5943
+				if (ServerPacket.UPDATE_RUNENERGY == var1.serverPacket) { // L: 5943
 					class195.method3681(); // L: 5944
 					runEnergy = var3.readUnsignedByte(); // L: 5945
 					field845 = cycleCntr; // L: 5946
@@ -4747,7 +4747,7 @@ public final class Client extends GameEngine implements Usernamed {
 				}
 
 				Widget var58;
-				if (ServerPacket.field2218 == var1.serverPacket) { // L: 5950
+				if (ServerPacket.UNKNOWN_2 == var1.serverPacket) { // L: 5950
 					var16 = var3.method5580(); // L: 5951
 					var5 = var3.readUnsignedShort(); // L: 5952
 					var18 = var3.readInt(); // L: 5953
@@ -4757,7 +4757,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5957
 				}
 
-				if (ServerPacket.field2160 == var1.serverPacket) { // L: 5959
+				if (ServerPacket.IF_CLOSESUB == var1.serverPacket) { // L: 5959
 					var16 = var3.readInt(); // L: 5960
 					InterfaceParent var53 = (InterfaceParent)interfaceParents.get((long)var16); // L: 5961
 					if (var53 != null) { // L: 5962
@@ -4773,7 +4773,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5968
 				}
 
-				if (ServerPacket.field2185 == var1.serverPacket) { // L: 5970
+				if (ServerPacket.IF_OPENSUB == var1.serverPacket) { // L: 5970
 					var16 = var3.method5643(); // L: 5971
 					var5 = var3.method5571(); // L: 5972
 					var18 = var3.method5580(); // L: 5973
@@ -4787,7 +4787,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5978
 				}
 
-				if (ServerPacket.field2162 == var1.serverPacket) { // L: 5980
+				if (ServerPacket.UPDATE_IGNORELIST == var1.serverPacket) { // L: 5980
 					MilliClock.friendSystem.ignoreList.read(var3, var1.serverPacketLength); // L: 5981
 					class9.FriendSystem_invalidateIgnoreds(); // L: 5982
 					field879 = cycleCntr; // L: 5983
@@ -4795,7 +4795,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5985
 				}
 
-				if (ServerPacket.field2216 == var1.serverPacket) { // L: 5987
+				if (ServerPacket.MESSAGE_PRIVATE_ECHO == var1.serverPacket) { // L: 5987
 					var38 = var3.readStringCp1252NullTerminated(); // L: 5988
 					var17 = AbstractFont.escapeBrackets(ServerPacket.method3663(AttackOption.method2135(var3))); // L: 5989
 					class234.addGameMessage(6, var38, var17); // L: 5990
@@ -4803,7 +4803,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5992
 				}
 
-				if (ServerPacket.field2148 == var1.serverPacket) { // L: 5994
+				if (ServerPacket.CAM_RESET == var1.serverPacket) { // L: 5994
 					isCameraLocked = false; // L: 5995
 
 					for (var16 = 0; var16 < 5; ++var16) { // L: 5996
@@ -4814,13 +4814,13 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 5998
 				}
 
-				if (ServerPacket.field2204 == var1.serverPacket) { // L: 6000
+				if (ServerPacket.REBUILD_NORMAL == var1.serverPacket) { // L: 6000
 					ItemContainer.loadRegions(false, var1.packetBuffer); // L: 6001
 					var1.serverPacket = null; // L: 6002
 					return true; // L: 6003
 				}
 
-				if (ServerPacket.field2193 == var1.serverPacket) { // L: 6005
+				if (ServerPacket.CAM_LOOKAT == var1.serverPacket) { // L: 6005
 					isCameraLocked = true; // L: 6006
 					RouteStrategy.field2124 = var3.readUnsignedByte(); // L: 6007
 					class89.field1140 = var3.readUnsignedByte(); // L: 6008
@@ -4837,7 +4837,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6018
 				}
 
-				if (ServerPacket.field2224 == var1.serverPacket) { // L: 6020
+				if (ServerPacket.TRIGGER_ONDIALOG_ABORT == var1.serverPacket) { // L: 6020
 					if (rootInterface != -1) { // L: 6021
 						WorldMapRectangle.runIntfCloseListeners(rootInterface, 0);
 					}
@@ -4846,7 +4846,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6023
 				}
 
-				if (ServerPacket.field2178 == var1.serverPacket) { // L: 6025
+				if (ServerPacket.IF_OPENTOP == var1.serverPacket) { // L: 6025
 					var16 = var3.method5582(); // L: 6026
 					rootInterface = var16; // L: 6027
 					this.resizeRoot(false); // L: 6028
@@ -4861,7 +4861,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6033
 				}
 
-				if (ServerPacket.field2221 == var1.serverPacket) { // L: 6035
+				if (ServerPacket.UPDATE_ZONE_FULL_FOLLOWS == var1.serverPacket) { // L: 6035
 					class248.field3222 = var3.method5571(); // L: 6036
 					PacketWriter.field1331 = var3.method5571(); // L: 6037
 
@@ -4884,7 +4884,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6052
 				}
 
-				if (ServerPacket.field2203 == var1.serverPacket) { // L: 6054
+				if (ServerPacket.URL_OPEN == var1.serverPacket) { // L: 6054
 					byte[] var39 = new byte[var1.serverPacketLength]; // L: 6055
 					var3.method5493(var39, 0, var39.length); // L: 6056
 					Buffer var52 = new Buffer(var39); // L: 6057
@@ -4894,20 +4894,20 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6061
 				}
 
-				if (ServerPacket.field2164 == var1.serverPacket) { // L: 6063
+				if (ServerPacket.LOC_PREFETCH == var1.serverPacket) { // L: 6063
 					UserComparator4.method3465(class194.field2344); // L: 6064
 					var1.serverPacket = null; // L: 6065
 					return true; // L: 6066
 				}
 
-				if (ServerPacket.field2205 == var1.serverPacket) { // L: 6068
+				if (ServerPacket.CHAT_FILTER_SETTINGS == var1.serverPacket) { // L: 6068
 					tradeChatMode = var3.method5573(); // L: 6069
 					publicChatMode = var3.method5572(); // L: 6070
 					var1.serverPacket = null; // L: 6071
 					return true; // L: 6072
 				}
 
-				if (ServerPacket.field2197 == var1.serverPacket) { // L: 6074
+				if (ServerPacket.IF_SETOBJECT == var1.serverPacket) { // L: 6074
 					var16 = var3.method5591(); // L: 6075
 					var5 = var3.method5592(); // L: 6076
 					var18 = var3.method5539(); // L: 6077
@@ -4961,7 +4961,7 @@ public final class Client extends GameEngine implements Usernamed {
 				}
 
 				boolean var50;
-				if (ServerPacket.field2180 == var1.serverPacket) { // L: 6113
+				if (ServerPacket.UNKNOWN_3 == var1.serverPacket) { // L: 6113
 					var50 = var3.readBoolean(); // L: 6114
 					if (var50) { // L: 6115
 						if (WorldMapIcon_0.field148 == null) { // L: 6116
@@ -4975,7 +4975,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6120
 				}
 
-				if (ServerPacket.field2170 == var1.serverPacket) { // L: 6122
+				if (ServerPacket.VARP_LARGE == var1.serverPacket) { // L: 6122
 					var16 = var3.method5592(); // L: 6123
 					var5 = var3.readUnsignedShort(); // L: 6124
 					Varps.Varps_temp[var5] = var16; // L: 6125
@@ -4989,7 +4989,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6132
 				}
 
-				if (ServerPacket.field2186 == var1.serverPacket) { // L: 6134
+				if (ServerPacket.MINIMAP_FLAG_SET == var1.serverPacket) { // L: 6134
 					destinationX = var3.readUnsignedByte(); // L: 6135
 					if (destinationX == 255) { // L: 6136
 						destinationX = 0;
@@ -5004,7 +5004,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6140
 				}
 
-				if (ServerPacket.field2167 == var1.serverPacket) { // L: 6142
+				if (ServerPacket.SYNC_CLIENT_VARCACHE == var1.serverPacket) { // L: 6142
 					for (var16 = 0; var16 < Varps.Varps_main.length; ++var16) { // L: 6143
 						if (Varps.Varps_main[var16] != Varps.Varps_temp[var16]) { // L: 6144
 							Varps.Varps_main[var16] = Varps.Varps_temp[var16]; // L: 6145
@@ -5017,13 +5017,13 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6151
 				}
 
-				if (ServerPacket.field2210 == var1.serverPacket) { // L: 6153
+				if (ServerPacket.UPDATE_SITESETTINGS == var1.serverPacket) { // L: 6153
 					WorldMapData_0.method244(var3.readStringCp1252NullTerminated()); // L: 6154
 					var1.serverPacket = null; // L: 6155
 					return true; // L: 6156
 				}
 
-				if (ServerPacket.field2171 == var1.serverPacket) { // L: 6158
+				if (ServerPacket.LOC_ADD_CHANGE == var1.serverPacket) { // L: 6158
 					UserComparator4.method3465(class194.field2343); // L: 6159
 					var1.serverPacket = null; // L: 6160
 					return true; // L: 6161
@@ -5031,7 +5031,7 @@ public final class Client extends GameEngine implements Usernamed {
 
 				long var22;
 				long var24;
-				if (ServerPacket.field2194 == var1.serverPacket) { // L: 6163
+				if (ServerPacket.MESSAGE_PRIVATE == var1.serverPacket) { // L: 6163
 					var38 = var3.readStringCp1252NullTerminated(); // L: 6164
 					var22 = (long)var3.readUnsignedShort(); // L: 6165
 					var24 = (long)var3.readMedium(); // L: 6166
@@ -5073,7 +5073,7 @@ public final class Client extends GameEngine implements Usernamed {
 				}
 
 				long var31;
-				if (ServerPacket.field2192 == var1.serverPacket) { // L: 6190
+				if (ServerPacket.MESSAGE_CLANCHAT == var1.serverPacket) { // L: 6190
 					var38 = var3.readStringCp1252NullTerminated(); // L: 6191
 					var22 = var3.readLong(); // L: 6192
 					var24 = (long)var3.readUnsignedShort(); // L: 6193
@@ -5108,27 +5108,27 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6215
 				}
 
-				if (ServerPacket.field2173 == var1.serverPacket) { // L: 6217
+				if (ServerPacket.LOGOUT_FULL == var1.serverPacket) { // L: 6217
 					WorldMapRectangle.logOut(); // L: 6218
 					var1.serverPacket = null; // L: 6219
 					return false; // L: 6220
 				}
 
-				if (ServerPacket.field2168 == var1.serverPacket) { // L: 6222
+				if (ServerPacket.PLAYER_INFO == var1.serverPacket) { // L: 6222
 					UserComparator10.updatePlayers(var3, var1.serverPacketLength); // L: 6223
 					TextureProvider.method2848(); // L: 6224
 					var1.serverPacket = null; // L: 6225
 					return true; // L: 6226
 				}
 
-				if (ServerPacket.field2206 == var1.serverPacket) { // L: 6228
+				if (ServerPacket.UPDATE_FRIENDLIST == var1.serverPacket) { // L: 6228
 					MilliClock.friendSystem.readUpdate(var3, var1.serverPacketLength); // L: 6229
 					field879 = cycleCntr; // L: 6230
 					var1.serverPacket = null; // L: 6231
 					return true; // L: 6232
 				}
 
-				if (ServerPacket.field2151 == var1.serverPacket) { // L: 6234
+				if (ServerPacket.IF_SETNPCHEAD == var1.serverPacket) { // L: 6234
 					var16 = var3.method5582(); // L: 6235
 					var5 = var3.method5591(); // L: 6236
 					var40 = CollisionMap.getWidget(var5); // L: 6237
@@ -5142,7 +5142,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6244
 				}
 
-				if (ServerPacket.field2190 == var1.serverPacket) { // L: 6246
+				if (ServerPacket.IF_SETCOLOUR == var1.serverPacket) { // L: 6246
 					var16 = var3.method5643(); // L: 6247
 					var5 = var3.method5580(); // L: 6248
 					var18 = var5 >> 10 & 31; // L: 6249
@@ -5159,7 +5159,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6259
 				}
 
-				if (ServerPacket.field2140 == var1.serverPacket) { // L: 6261
+				if (ServerPacket.UPDATE_INV_PARTIAL == var1.serverPacket) { // L: 6261
 					var16 = var3.readInt(); // L: 6262
 					var5 = var3.readUnsignedShort(); // L: 6263
 					if (var16 < -70000) { // L: 6264
@@ -5199,7 +5199,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6288
 				}
 
-				if (ServerPacket.field2198 == var1.serverPacket) { // L: 6290
+				if (ServerPacket.VARP_SMALL == var1.serverPacket) { // L: 6290
 					byte var59 = var3.method5665(); // L: 6291
 					var5 = var3.method5580(); // L: 6292
 					Varps.Varps_temp[var5] = var59; // L: 6293
@@ -5213,7 +5213,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6300
 				}
 
-				if (ServerPacket.field2177 == var1.serverPacket) { // L: 6302
+				if (ServerPacket.UPDATE_INV_CLEAR == var1.serverPacket) { // L: 6302
 					var16 = var3.readInt(); // L: 6303
 					var51 = CollisionMap.getWidget(var16); // L: 6304
 
@@ -5227,7 +5227,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6311
 				}
 
-				if (ServerPacket.field2196 == var1.serverPacket) { // L: 6313
+				if (ServerPacket.IF_SETHIDE == var1.serverPacket) { // L: 6313
 					var16 = var3.method5643(); // L: 6314
 					var46 = var3.method5571() == 1; // L: 6315
 					var40 = CollisionMap.getWidget(var16); // L: 6316
@@ -5240,13 +5240,13 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6322
 				}
 
-				if (ServerPacket.field2212 == var1.serverPacket) { // L: 6324
+				if (ServerPacket.OBJ_COUNT == var1.serverPacket) { // L: 6324
 					UserComparator4.method3465(class194.field2350); // L: 6325
 					var1.serverPacket = null; // L: 6326
 					return true; // L: 6327
 				}
 
-				if (ServerPacket.field2159 == var1.serverPacket) { // L: 6329
+				if (ServerPacket.IF_SETTEXT == var1.serverPacket) { // L: 6329
 					var16 = var3.readInt(); // L: 6330
 					var17 = var3.readStringCp1252NullTerminated(); // L: 6331
 					var40 = CollisionMap.getWidget(var16); // L: 6332
@@ -5259,7 +5259,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6338
 				}
 
-				if (ServerPacket.field2223 == var1.serverPacket) { // L: 6340
+				if (ServerPacket.IF_SETMODEL == var1.serverPacket) { // L: 6340
 					var16 = var3.readInt(); // L: 6341
 					var5 = var3.method5580(); // L: 6342
 					var40 = CollisionMap.getWidget(var16); // L: 6343
@@ -5281,7 +5281,7 @@ public final class Client extends GameEngine implements Usernamed {
 				}
 
 				Widget var8;
-				if (ServerPacket.field2211 == var1.serverPacket) { // L: 6358
+				if (ServerPacket.IF_SETANGLE == var1.serverPacket) { // L: 6358
 					var16 = var3.method5582(); // L: 6359
 					var5 = var3.method5539(); // L: 6360
 					var18 = var3.method5539(); // L: 6361
@@ -5298,13 +5298,13 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6371
 				}
 
-				if (ServerPacket.field2181 == var1.serverPacket) { // L: 6373
+				if (ServerPacket.SOUND_AREA == var1.serverPacket) { // L: 6373
 					UserComparator4.method3465(class194.field2342); // L: 6374
 					var1.serverPacket = null; // L: 6375
 					return true; // L: 6376
 				}
 
-				if (ServerPacket.field2222 == var1.serverPacket) { // L: 6378
+				if (ServerPacket.IF_SETPOSITION == var1.serverPacket) { // L: 6378
 					var16 = var3.method5584(); // L: 6379
 					var5 = var3.readShort(); // L: 6380
 					var18 = var3.readInt(); // L: 6381
@@ -5325,7 +5325,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6393
 				}
 
-				if (ServerPacket.field2161 == var1.serverPacket) { // L: 6395
+				if (ServerPacket.PING_STATISTICS_REQUEST == var1.serverPacket) { // L: 6395
 					var16 = var3.readInt(); // L: 6396
 					var5 = var3.readInt(); // L: 6397
 					var18 = GrandExchangeOfferNameComparator.getGcDuration(); // L: 6398
@@ -5339,14 +5339,14 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6407
 				}
 
-				if (ServerPacket.field2166 == var1.serverPacket) { // L: 6409
+				if (ServerPacket.Logout == var1.serverPacket) { // L: 6409
 					var16 = var3.readUnsignedByte(); // L: 6410
 					WorldMapSection1.forceDisconnect(var16); // L: 6411
 					var1.serverPacket = null; // L: 6412
 					return false; // L: 6413
 				}
 
-				if (ServerPacket.field2163 == var1.serverPacket) { // L: 6415
+				if (ServerPacket.CAM_SETANGLE == var1.serverPacket) { // L: 6415
 					isCameraLocked = true; // L: 6416
 					WorldMapData_0.field112 = var3.readUnsignedByte(); // L: 6417
 					EnumComposition.field3340 = var3.readUnsignedByte(); // L: 6418
@@ -5376,7 +5376,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6436
 				}
 
-				if (ServerPacket.field2147 == var1.serverPacket) { // L: 6438
+				if (ServerPacket.IF_SETTARGETPARAM == var1.serverPacket) { // L: 6438
 					var16 = var3.readInt(); // L: 6439
 					var5 = var3.method5580(); // L: 6440
 					if (var5 == 65535) { // L: 6441
@@ -5403,7 +5403,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6452
 				}
 
-				if (ServerPacket.field2179 == var1.serverPacket) { // L: 6454
+				if (ServerPacket.UPDATE_UID192 == var1.serverPacket) { // L: 6454
 					var3.offset += 28; // L: 6455
 					if (var3.checkCrc()) { // L: 6456
 						WorldMapEvent.method808(var3, var3.offset - 28);
@@ -5413,7 +5413,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6458
 				}
 
-				if (ServerPacket.field2144 == var1.serverPacket) { // L: 6460
+				if (ServerPacket.UPDATE_STAT == var1.serverPacket) { // L: 6460
 					class195.method3681(); // L: 6461
 					var16 = var3.method5592(); // L: 6462
 					var5 = var3.method5571(); // L: 6463
@@ -5433,7 +5433,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6471
 				}
 
-				if (ServerPacket.field2183 == var1.serverPacket) { // L: 6473
+				if (ServerPacket.SET_PLAYER_OP == var1.serverPacket) { // L: 6473
 					var38 = var3.readStringCp1252NullTerminated(); // L: 6474
 					var5 = var3.method5571(); // L: 6475
 					var18 = var3.method5572(); // L: 6476
@@ -5450,7 +5450,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6483
 				}
 
-				if (ServerPacket.field2142 == var1.serverPacket) { // L: 6485
+				if (ServerPacket.UPDATE_INV_FULL == var1.serverPacket) { // L: 6485
 					var16 = var3.readInt(); // L: 6486
 					var5 = var3.readUnsignedShort(); // L: 6487
 					if (var16 < -70000) { // L: 6488
@@ -5498,7 +5498,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6516
 				}
 
-				if (ServerPacket.field2200 == var1.serverPacket) { // L: 6518
+				if (ServerPacket.UPDATE_RUNWEIGHT == var1.serverPacket) { // L: 6518
 					class195.method3681(); // L: 6519
 					weight = var3.readShort(); // L: 6520
 					field845 = cycleCntr; // L: 6521
@@ -5506,7 +5506,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6523
 				}
 
-				if (ServerPacket.field2209 == var1.serverPacket) { // L: 6525
+				if (ServerPacket.UPDATE_CLANCHAT_CHANNEL_FULL == var1.serverPacket) { // L: 6525
 					if (var1.serverPacketLength == 0) { // L: 6526
 						WorldMapArea.clanChat = null; // L: 6527
 					} else {
@@ -5522,13 +5522,13 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6537
 				}
 
-				if (ServerPacket.field2213 == var1.serverPacket) { // L: 6539
+				if (ServerPacket.LOC_DEL == var1.serverPacket) { // L: 6539
 					UserComparator4.method3465(class194.field2347); // L: 6540
 					var1.serverPacket = null; // L: 6541
 					return true; // L: 6542
 				}
 
-				if (ServerPacket.field2141 == var1.serverPacket) { // L: 6544
+				if (ServerPacket.LOGOUT_TRANSFER == var1.serverPacket) { // L: 6544
 					World var37 = new World(); // L: 6545
 					var37.host = var3.readStringCp1252NullTerminated(); // L: 6546
 					var37.id = var3.readUnsignedShort(); // L: 6547
@@ -5542,19 +5542,19 @@ public final class Client extends GameEngine implements Usernamed {
 					return false; // L: 6555
 				}
 
-				if (ServerPacket.field2182 == var1.serverPacket) { // L: 6557
+				if (ServerPacket.MAP_ANIM == var1.serverPacket) { // L: 6557
 					UserComparator4.method3465(class194.field2349); // L: 6558
 					var1.serverPacket = null; // L: 6559
 					return true; // L: 6560
 				}
 
-				if (ServerPacket.field2202 == var1.serverPacket) { // L: 6562
+				if (ServerPacket.REBUILD_REGION == var1.serverPacket) { // L: 6562
 					ItemContainer.loadRegions(true, var1.packetBuffer); // L: 6563
 					var1.serverPacket = null; // L: 6564
 					return true; // L: 6565
 				}
 
-				if (ServerPacket.field2158 == var1.serverPacket) { // L: 6567
+				if (ServerPacket.UPDATE_INV_STOP_TRANSIT == var1.serverPacket) { // L: 6567
 					var16 = var3.method5582(); // L: 6568
 					Actor.method1819(var16); // L: 6569
 					changedItemContainers[++field837 - 1 & 31] = var16 & 32767; // L: 6570
@@ -5562,20 +5562,20 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6572
 				}
 
-				if (ServerPacket.field2220 == var1.serverPacket) { // L: 6574
+				if (ServerPacket.CHAT_FILTER_SETTINGS_PRIVATE_CHAT == var1.serverPacket) { // L: 6574
 					privateChatMode = class52.method840(var3.readUnsignedByte()); // L: 6575
 					var1.serverPacket = null; // L: 6576
 					return true; // L: 6577
 				}
 
-				if (ServerPacket.field2208 == var1.serverPacket) { // L: 6579
+				if (ServerPacket.UPDATE_ZONE_PARTIAL_FOLLOWS == var1.serverPacket) { // L: 6579
 					PacketWriter.field1331 = var3.method5571(); // L: 6580
 					class248.field3222 = var3.method5573(); // L: 6581
 					var1.serverPacket = null; // L: 6582
 					return true; // L: 6583
 				}
 
-				if (ServerPacket.field2195 == var1.serverPacket) { // L: 6585
+				if (ServerPacket.UNKNOWN_4 == var1.serverPacket) { // L: 6585
 					var50 = var3.readUnsignedByte() == 1; // L: 6586
 					if (var50) { // L: 6587
 						class4.field17 = class298.currentTimeMillis() - var3.readLong(); // L: 6588
@@ -5589,7 +5589,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6594
 				}
 
-				if (ServerPacket.field2155 == var1.serverPacket) { // L: 6596
+				if (ServerPacket.IF_MOVESUB == var1.serverPacket) { // L: 6596
 					var16 = var3.method5592(); // L: 6597
 					var5 = var3.method5643(); // L: 6598
 					InterfaceParent var6 = (InterfaceParent)interfaceParents.get((long)var16); // L: 6599
@@ -5622,7 +5622,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6615
 				}
 
-				if (ServerPacket.field2146 == var1.serverPacket) { // L: 6617
+				if (ServerPacket.UNKNOWN_1 == var1.serverPacket) { // L: 6617
 					var16 = var3.readInt(); // L: 6618
 					if (var16 != field730) { // L: 6619
 						field730 = var16; // L: 6620
@@ -5633,7 +5633,7 @@ public final class Client extends GameEngine implements Usernamed {
 					return true; // L: 6624
 				}
 
-				if (ServerPacket.field2156 == var1.serverPacket) { // L: 6626
+				if (ServerPacket.MAP_PROJANIM == var1.serverPacket) { // L: 6626
 					UserComparator4.method3465(class194.field2346); // L: 6627
 					var1.serverPacket = null; // L: 6628
 					return true; // L: 6629
